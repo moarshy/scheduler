@@ -5,8 +5,8 @@ First, clone the repository and set up the Python environment using Poetry.
 
 ```bash
 pip install poetry
-git clone [REPOSITORY_URL]
-cd [REPOSITORY_DIRECTORY]
+git clone https://github.com/moarshy/scheduler.git
+cd scheduler
 poetry config virtualenvs.in-project true
 poetry install
 poetry env info
@@ -39,3 +39,4 @@ journalctl -n 100 # Last 100 lines of logs
 journalctl -u insource_sch.service -f # Follow logs of a specific service
 
 ```
+Replace insource_sch.service with your actual service name in the journalctl commands.
