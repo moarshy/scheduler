@@ -1,0 +1,15 @@
+[Unit]
+Description=My Poetry Managed Python Script Service
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/Users/arshath/play/insource/scheduler/.venv/bin/python /Users/arshath/play/insource/scheduler/scheduler/main.py # CHANGE IT ACCORDINGLY
+Restart=on-failure
+User=username
+Group=groupname 
+Environment="PATH=/Users/arshath/play/insource/scheduler/.venv/bin:$PATH" # CHANGE IT ACCORDINGLY
+WorkingDirectory=/Users/arshath/play/insource/scheduler # CHANGE IT ACCORDINGLY
+
+[Install]
+WantedBy=multi-user.target
